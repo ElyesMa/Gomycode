@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>  
+</head>
+<body>
+    <!-- Semantic tags -->
+    <!-- Header-->
+
+    <nav>
+        <a id="topofthepage">Home</a>
+        <a>About</a>
+        <a>Work </a>
+        <a>Resume </a>
+        <a>Contact </a>
+    </nav> 
+    <img src="https://fabskill.com/assets/img/bus_cover/cropped/63_1565191317.webp" alt="LOGO" height="72" width="272">
+    <br>
+    <a href="https://gomycode.com/TN-FR/home">   Go to GOMYCODE</a>
+    <br>
+    <h4><font size="6">☺</font> Listen to some musique while filling your Portfolio  </h4>
+    <audio controls>
+    <source src="https://music2019.su/uploads/files/2022-02/ennio-morricone-le-vent-le-cri-premier-th232me_60049115.mp3" type="audio/mpeg">
+     Please Check the audio Extension
+    </audio>
+
+    <h1> PORTFOLIO</h1>
+    <!-- main -->
+    <section>
+        <h2>About section</h2>
+            <form>
+                <label>First Name:</label>
+                <input type="text" name="firstName" placeholder="please enter your firstName" />
+                <br />
+                <label>Last Name:</label>
+                <input type="text" name="lastName" id="lastName" placeholder="please enter your lastName"/>
+                <br />
+                <label>Birth Date:</label>
+                <input type="date" name="birthday" />
+                <br />
+            </form>
+    </section>
+
+    <section>
+        <h2>Work section</h2>
+        <label for="Career">Career fields:</label>
+        <select id="careerfields" onchange="myFunction()">
+          <option value="Arts, culture and entertainment">Arts, culture and entertainment</option>
+          <option value="Architecture and engineering">Architecture and engineering</option>
+          <option value="Business, management and administration">Business, management and administration Science Track</option>
+          <option value="Communications">Communications</option>
+          <option value="Education">Education</option>
+          <option value="Science and technology">Science and technology</option>
+          <option value="Installation, repair and maintenance">Installation, repair and maintenance</option>
+          <option value="Farming, fishing and forestry">Farming, fishing and forestry</option>
+          <option value="Government">Government</option>
+          <option value="Health and medicine">Health and medicine</option>
+          <option value="Law and public policy">Law and public policy</option>
+        </select>
+      
+   
+    <br>
+    <label for="Jobs">Jobs:</label>
+    <select class="form-control"  id='Jobs' name='Jobs' >
+	</select>
+    <script>  
+    function myFunction(){
+            var careerfieldsSelectedValue = careerfields.options[careerfields.selectedIndex].value;
+			if (careerfieldsSelectedValue=='Architecture and engineering')
+            {				
+				Jobs.options.length=0;
+				Jobs.options[0] = new Option('--Select--', '');
+				Jobs.options[1] = new Option('Architect', 'Architect');
+				Jobs.options[2] = new Option('Civil engineer', 'Civil engineer');
+				Jobs.options[3] = new Option('Landscape architect', 'Landscape architect');
+				Jobs.options[4] = new Option('Sustainable designer', 'Sustainable designer');
+				Jobs.options[5] = new Option('Biomedical engineer', 'Biomedical engineer');
+			}
+            else if (careerfieldsSelectedValue=='Arts, culture and entertainment')
+            {				
+				Jobs.options.length=0;
+				Jobs.options[0] = new Option('--Select--', '');
+				Jobs.options[1] = new Option('Singer/songwriter', 'Singer/songwriter');
+				Jobs.options[2] = new Option('Music producer', 'Music producer');
+				Jobs.options[3] = new Option('Art curator', 'Art curator');
+				Jobs.options[4] = new Option('Animator/video game designer', 'Animator/video game designer');
+				Jobs.options[5] = new Option('Filmmaker', 'Filmmaker');
+                Jobs.options[6] = new Option('Graphic designer', 'Graphic designer');
+                Jobs.options[7] = new Option('Fashion designer', 'Fashion designer');
+                Jobs.options[8] = new Option('Photographer', 'Photographer');
+			}
+            else if (careerfieldsSelectedValue=='Business, management and administration')
+            {				
+				Jobs.options.length=0;
+				Jobs.options[0] = new Option('--Select--', '');
+				Jobs.options[1] = new Option('Human resources manager', 'Human resources manager');
+                Jobs.options[2] = new Option('Marketing assistant', 'Marketing assistant');
+                Jobs.options[3] = new Option('Accountants', 'Accountants');
+                Jobs.options[4] = new Option('Secretary', 'Secretary');
+                Jobs.options[5] = new Option('Entrepreneur/small business owner', 'Entrepreneur/small business owner');
+                Jobs.options[6] = new Option('Real estate agent', 'Real estate agent');
+                Jobs.options[7] = new Option('Business development manager', 'Business development manager');		
+			}
+            else if (careerfieldsSelectedValue=='Communications')
+            {
+				Jobs.options.length=0;
+				Jobs.options[0] = new Option('--Select--', '');
+                Jobs.options[1] = new Option('Journalist', 'Journalist');
+                Jobs.options[2] = new Option('Copywriter', 'Copywriter');
+                Jobs.options[3] = new Option('Communications manager', 'Communications manager');
+                Jobs.options[4] = new Option('Public relations specialist', 'Public relations specialist');
+                Jobs.options[5] = new Option('Meeting/event planner', 'Meeting/event planner');
+                Jobs.options[6] = new Option('Social media manager', 'Social media manager');
+                Jobs.options[7] = new Option('Brand manager', 'Brand manager');		
+			}
+            else if (careerfieldsSelectedValue=='Community and social services')
+            {				
+				Jobs.options.length=0;
+				Jobs.options[0] = new Option('--Select--', '');
+                Jobs.options[1] = new Option('School counselor', 'School counselor');
+                Jobs.options[2] = new Option('Speech pathologist', 'Speech pathologist');
+                Jobs.options[3] = new Option('Rehabilitation counselor', 'Rehabilitation counselor');
+                Jobs.options[4] = new Option('Licensed clinical social worker', 'Licensed clinical social worker');
+                Jobs.options[5] = new Option('Child welfare social worker', 'Child welfare social worker');
+                Jobs.options[6] = new Option('Palliative and hospice care worker', 'Palliative and hospice care worker');  
+			}
+            else if (careerfieldsSelectedValue=='Education')
+            {				
+				Jobs.options.length=0;
+				Jobs.options[0] = new Option('--Select--', '');
+                Jobs.options[1] = new Option('Special education teacher', 'Special education teacher');
+                Jobs.options[2] = new Option('School principal', 'School principal');
+                Jobs.options[3] = new Option('Superintendent', 'Superintendent');
+                Jobs.options[4] = new Option('College professor', 'College professor');
+                Jobs.options[5] = new Option('School librarian', 'School librarian');
+                Jobs.options[6] = new Option('Substitute teacher', 'Substitute teacher'); 
+			}
+            else if (careerfieldsSelectedValue=='Science and technology')
+            {				
+				Jobs.options.length=0;
+				Jobs.options[0] = new Option('--Select--', '');
+                Jobs.options[1] = new Option('Archeologist', 'Archeologist');
+                Jobs.options[2] = new Option('Software engineer', 'Software engineer');
+                Jobs.options[3] = new Option('Laboratory technician', 'Laboratory technician');
+                Jobs.options[4] = new Option('Microbiologist', 'Microbiologist');
+                Jobs.options[5] = new Option('Physicist', 'Physicist');   
+			}
+            else if (careerfieldsSelectedValue=='Installation, repair and maintenance')
+            {				
+				Jobs.options.length=0;
+				Jobs.options[0] = new Option('--Select--', '');
+                Jobs.options[1] = new Option('Auto mechanic', 'Auto mechanic');
+                Jobs.options[2] = new Option('Landscaper and groundskeeper', 'Landscaper and groundskeeper');
+                Jobs.options[3] = new Option('Bicycle repairer', 'Bicycle repairer');
+                Jobs.options[4] = new Option('Wind turbine technician', 'Wind turbine technician');
+                Jobs.options[5] = new Option('Plumber', 'Plumber');     
+			}
+            else if (careerfieldsSelectedValue=='Farming, fishing and forestry')
+            {				
+				Jobs.options.length=0;
+				Jobs.options[0] = new Option('--Select--', '');
+                Jobs.options[1] = new Option('Agricultural worker', 'Agricultural worker');
+                Jobs.options[2] = new Option('Animal breeder', 'Animal breeder');
+                Jobs.options[3] = new Option('Nursery worker', 'Nursery worker');
+                Jobs.options[4] = new Option('Forest and conservation worker', 'Forest and conservation worker');
+                Jobs.options[5] = new Option('Fisher', 'Fisher');
+			}
+            else if (careerfieldsSelectedValue=='Government')
+            {				
+				Jobs.options.length=0;
+				Jobs.options[0] = new Option('--Select--', '');
+                Jobs.options[1] = new Option('School cafeteria worker', 'School cafeteria worker');
+                Jobs.options[2] = new Option('Congressional staff', 'Congressional staff');
+                Jobs.options[3] = new Option('National park ranger', 'National park ranger');
+                Jobs.options[4] = new Option('Mail carrier', 'Mail carrier');
+                Jobs.options[5] = new Option('Elementary school teacher', 'Elementary school teacher');                
+			}
+            else if (careerfieldsSelectedValue=='Health and medicine')
+            {				
+				Jobs.options.length=0;
+				Jobs.options[0] = new Option('--Select--', '');
+                Jobs.options[1] = new Option('Anesthesiologist', 'Anesthesiologist');
+                Jobs.options[2] = new Option('Dental assistant', 'Dental assistant');
+                Jobs.options[3] = new Option('Nurse', 'Nurse');
+                Jobs.options[4] = new Option('Veterinarian', 'Veterinarian');
+                Jobs.options[5] = new Option('Physical therapist', 'Physical therapist');   
+			}
+            else if (careerfieldsSelectedValue=='Law and public policy')
+            {				
+				Jobs.options.length=0;
+				Jobs.options[0] = new Option('--Select--', '');
+                Jobs.options[1] = new Option('Lobbyist', 'Lobbyist');
+                Jobs.options[2] = new Option('Public administrator', 'Public administrator');
+                Jobs.options[3] = new Option('Paralegal', 'Paralegal');
+                Jobs.options[4] = new Option('Lawyer', 'Lawyer');
+                Jobs.options[5] = new Option('Labor relations specialist', 'Labor relations specialist');		
+			}
+            else if (careerfieldsSelectedValue=='Sales')
+            {				
+				Jobs.options.length=0;
+				Jobs.options[0] = new Option('--Select--', '');
+                Jobs.options[1] = new Option('Sales associate', 'Sales associate');
+                Jobs.options[2] = new Option('sales development rep', 'sales development rep');
+                Jobs.options[3] = new Option('Account executive', 'Account executive');
+                Jobs.options[4] = new Option('Regional sales manager', 'Regional sales manager');
+                Jobs.options[5] = new Option('VP of sales', 'VP of sales');    
+			}
+     
+    }
+    </script>
+     <br>
+    <label>In case you haven't found your jobs firld:</label>
+    <input type="text" name="Jobs" placeholder="please enter your job" />
+    <br>
+    <label>Enter the number of years of your experience:</label>
+    <input type="text" name="Experiencelengh" placeholder="for How many years you have worked in this job" />
+
+
+
+    </section>
+
+    <section>
+        <h2>Resume section</h2></li>
+            <textarea name="resume" cols="30" rows="5" placeholder="Write a short brief about you"></textarea>
+    </section>
+
+    <section>
+        <h2>Contact section</h2>
+        <form>
+            <label>Adresse:</label>
+            <input type="text" name="Adresse" placeholder="please enter your Adresse" />
+            <br />
+            <label>Phone number:</label>
+            <input type="text" name="lastName" id="Phone number" placeholder="please enter your Phone number"/>
+            <br />
+            <label>E-mail:</label>
+            <input type="text" name="E-mail" placeholder="please enter your E-mail" />
+            <br />
+        </form>
+    </section>
+    
+    
+
+    <form>
+    <button type="submit">Validate</button>
+    <button type="reset">reset</button>
+    </form>
+    
+    <!-- footer -->
+<br>
+ <a href="#topofthepage">let's go to the top of the page</a>
+</body>
+
+
+
+</html>
